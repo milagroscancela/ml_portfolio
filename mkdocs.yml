@@ -1,3 +1,5 @@
+# Configuracion del tema del portfolio
+
 site_name: "Portfolio: Ing. inteligencia artificial"
 site_description: Portfolio académico del curso machine learning - Milagros Cancela
 site_author: Milagros Cancela
@@ -40,6 +42,7 @@ theme:
     - content.code.copy
     - content.code.annotate
   
+# Icono del portfolio
 icon:
   logo: material/brain-network
   repo: fontawesome/brands/github
