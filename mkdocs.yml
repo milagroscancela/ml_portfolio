@@ -1,27 +1,26 @@
-# Configuracion del tema del portfolio
-
-site_name: "Portfolio: Ing. inteligencia artificial"
-site_description: Portfolio académico del curso machine learning - Milagros Cancela
+# Configuración del tema del portfolio
+site_name: "Portfolio: Ing. Inteligencia Artificial"
+site_description: Portfolio académico - Machine Learning - Milagros Cancela
 site_author: Milagros Cancela
 
 theme:
   name: material
   language: es
   
-  # Color Palette - Pantone Violet V2 U con modo claro/oscuro
+  # Color Palette - Rosa Oscuro Aesthetic con modo claro/oscuro
   palette:
     # Light mode (Modo Claro)
     - scheme: default
-      primary: deep purple  # Color violeta/morado base
-      accent: purple
+      primary: pink
+      accent: pink
       toggle:
         icon: material/brightness-7
         name: Cambiar a modo oscuro
     
     # Dark mode (Modo Oscuro)
     - scheme: slate
-      primary: deep purple  # Color violeta/morado base
-      accent: purple
+      primary: pink
+      accent: pink
       toggle:
         icon: material/brightness-4
         name: Cambiar a modo claro
@@ -41,18 +40,21 @@ theme:
     - search.highlight
     - content.code.copy
     - content.code.annotate
+    - navigation.expand
   
-# Icono del portfolio
-icon:
-  logo: material/brain-network
-  repo: fontawesome/brands/github
+  # Icono del portfolio
+  icon:
+    logo: material/brain
+    repo: fontawesome/brands/github
 
 # Plugins
 plugins:
-  - search
+  - search:
+      lang: es
   - awesome-pages
   - git-revision-date-localized:
       fallback_to_build_date: true
+      enable_creation_date: true
   - glightbox:
       touchNavigation: true
       loop: false
@@ -67,6 +69,7 @@ plugins:
 markdown_extensions:
   - admonition
   - attr_list
+  - md_in_html
   - footnotes
   - tables
   - toc:
@@ -93,9 +96,14 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
 
-# Custom CSS para Pantone Violet V2 U
+# Custom CSS para Rosa Oscuro Aesthetic
 extra_css:
   - css/extra.css
+
+# JavaScript adicional (para matemáticas)
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 # Social y otros extras
 extra:
@@ -109,3 +117,30 @@ extra:
     - icon: fontawesome/solid/envelope
       link: mailto:milagros.cancela@correo.ucu.edu.uy
       name: Email
+  
+  analytics:
+    feedback:
+      title: ¿Te resultó útil esta página?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: Sí, muy útil
+          data: 1
+          note: >-
+            ¡Gracias por tu feedback!
+        - icon: material/emoticon-sad-outline
+          name: Podría mejorar
+          data: 0
+          note: >-
+            Gracias por tu feedback. Ayúdame a mejorar.
+
+# Navegación
+nav:
+  - Inicio: index.md
+  - Acerca de mí: acerca.md
+  - Portfolio:
+    - portfolio/index.md
+    - Tareas Integradoras: portfolio/tareas-integradoras/
+    - Lecturas: portfolio/lecturas/
+    - Apuntes: portfolio/apuntes/
+    - Exploración Extra: portfolio/exploracion-extra/
+  - Recursos: recursos.md
